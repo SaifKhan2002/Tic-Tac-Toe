@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Tic Tac Toe | 2025 Edition</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="title animate__animated animate__fadeInDown">✨ Neon Tic Tac Toe 2025 ✨</h1>
+            <div class="theme-toggle">
+                <button id="themeBtn">🌙</button>
+            </div>
+        </header>
+
+        <div class="game-controls">
+            <div class="player-customization">
+                <div class="player-option">
+                    <label for="playerX">Player X:</label>
+                    <select id="playerX">
+                        <option value="X">X</option>
+                        <option value="❤️">❤️</option>
+                        <option value="🔥">🔥</option>
+                        <option value="🌟">🌟</option>
+                    </select>
+                </div>
+                <div class="player-option">
+                    <label for="playerO">Player O:</label>
+                    <select id="playerO">
+                        <option value="O">O</option>
+                        <option value="💙">💙</option>
+                        <option value="🌊">🌊</option>
+                        <option value="🍕">🍕</option>
+                    </select>
+                </div>
+            </div>
+            <button id="newGameBtn" class="btn animate__animated animate__pulse animate__infinite">New Game</button>
+        </div>
+
+        <div class="game-status animate__animated animate__fadeIn">
+            <p id="statusMessage">Player X's turn</p>
+        </div>
+
+        <div class="game-board">
+            <div class="board-row">
+                <div class="cell" data-index="0"></div>
+                <div class="cell" data-index="1"></div>
+                <div class="cell" data-index="2"></div>
+            </div>
+            <div class="board-row">
+                <div class="cell" data-index="3"></div>
+                <div class="cell" data-index="4"></div>
+                <div class="cell" data-index="5"></div>
+            </div>
+            <div class="board-row">
+                <div class="cell" data-index="6"></div>
+                <div class="cell" data-index="7"></div>
+                <div class="cell" data-index="8"></div>
+            </div>
+        </div>
+
+        <div class="game-stats">
+            <div class="stats-box">
+                <h3>Score</h3>
+                <p>X: <span id="xWins">0</span></p>
+                <p>O: <span id="oWins">0</span></p>
+                <p>Draws: <span id="draws">0</span></p>
+            </div>
+            <div class="stats-box">
+                <h3>Game Timeline</h3>
+                <div id="timeline"></div>
+            </div>
+        </div>
+
+        <div id="reactionContainer" class="reactions"></div>
+    </div>
+
+    <canvas id="confetti"></canvas>
+
+    <script src="index.js"></script>
+</body>
+</html>
